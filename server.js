@@ -19,6 +19,11 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+//Products Index
+app.use('/products', ctrl.products);
+
+
+
 // Listener
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
