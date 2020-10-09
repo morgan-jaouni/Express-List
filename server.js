@@ -12,6 +12,7 @@ app.set('view engine', 'ejs');
 // Controller
 const ctrl = require('./controllers');
 
+
 // Routes
 
 // Home Route
@@ -21,6 +22,9 @@ app.get('/', (req, res) => {
 
 //Products Index
 app.use('/products', ctrl.products);
+
+//Users Index
+app.use('/users', ctrl.users);
 
 
 
