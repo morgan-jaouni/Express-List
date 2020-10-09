@@ -9,4 +9,12 @@ router.get('/', (req,res) => {
 });
 
 
+//New Product
+router.get('/new', (req,res) => {
+
+    res.render('products/new')
+
+});
+
+
 module.exports = router;
