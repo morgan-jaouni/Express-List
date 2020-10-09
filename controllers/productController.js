@@ -5,7 +5,14 @@ const db = require('../models');
 
 //Get Index
 router.get('/', (req,res) => {
-    res.render('products/index');
+    
+    db.Product.findById({}, (err, allProducts) => {
+    
+        if (err) return console.log(err);
+
+        res.render('products/index', {products : allProducts})
+
+    });
 });
 
 
@@ -34,5 +41,19 @@ router.post('/', (req,res) => {
     }); 
   });
 });
+
+//GET Show products
+router.get('/:productId', (req,res) =>{
+
+    db.Product.findById(req.params.productId)
+    .populate('user')
+    .exec((err, productById) => {
+        if(err) return console.log(err);
+
+        res.render('products/show', productById)
+
+    });
+});
+
 
 module.exports = router;

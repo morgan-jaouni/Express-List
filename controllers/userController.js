@@ -18,7 +18,7 @@ router.get('/', (req,res) => {
 // GET Users show page
 router.get('/:userId', (req, res) => {
   db.User.findById(req.params.userId)
-    // .populate('products')
+    .populate('products')
     .exec((err, foundUser) => {
       if(err) return console.log(err);
 
