@@ -9,6 +9,9 @@ const PORT = process.env.PORT || 4000;
 // View Engine
 app.set('view engine', 'ejs');
 
+// Controller
+const ctrl = require('./controllers');
+
 // Routes
 
 // Home Route
