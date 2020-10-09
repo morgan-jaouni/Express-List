@@ -6,8 +6,26 @@
     <title>Express List</title>
   </head>
   <body>
-    <h1>Express List</h1>
-    <%- include('./partials/navbar') %> 
+    <h1>Your Profile</h1>
+    <%- include('../partials/navbar') %> 
 
+
+    <section>
+      <div class="user-info">
+        <h3>Profile Info</h3>
+        <p>Name: <%= user.name %> </p>
+        <p>Username: <%= user.userName %> </p>
+        <p>Password: <%= user.password %> </p>
+        <p>Location: <%= user.location %> </p>
+      </div>
+      <div>
+        <button>
+          <a href="/products/new">Create New Listing</a>
+        </button>
+      </div>
+      <div class="user-listings">
+        <h3>Current Listings</h3>
+      </div>
+    </section>
   </body>
 </html>

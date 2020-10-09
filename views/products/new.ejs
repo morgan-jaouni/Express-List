@@ -9,5 +9,26 @@
     <h1> List An Item! </h1>
     <%- include('../partials/navbar') %> 
 
+
+    <form action="/products" method="POST">
+
+      <div>
+      <label for="type">For Sale: </label>
+      <input id="type" name="type" type="text"></input>
+      </div>
+      <div>
+      <label for="price">Price: </label>
+      <input id="price" name="price" type="text"></input>
+      </div>
+      <div>
+      <label for="condition">Condition: </label>
+      <input id="condition" name="condition" type="text"></input>
+      </div>
+      <div>
+      <label for="image">Image: </label>
+      <input id="image" name="image" type="text"></input>
+      </div>
+      <button type="submit">Sign Up</button>
+      </form>
   </body>
 </html>

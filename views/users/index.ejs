@@ -7,7 +7,16 @@
   </head>
   <body>
     <h1>View Users</h1>
-    <%- include('../partials/navbar') %> 
+    <%- include('../partials/navbar') %>
 
+    <h2>Sellers</h2>
+
+    <ul>
+      <% for(let i = 0; i < users.length; i++) { %> 
+        <li>
+          <a href="/users/<%= users[i].id %>"><%= users[i].name %> </a>
+        </li>
+      <% } %>
+    </ul>
   </body>
 </html>
