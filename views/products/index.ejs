@@ -9,5 +9,14 @@
     <h1>Products Index</h1>
     <%- include('../partials/navbar') %> 
 
+    <ul>
+      <% for(let i = 0; i < products.length; i++) { %> 
+        <li>
+          <a href="/products<%= products[i].id %>"><%= products[i].name %> </a>
+        </li>
+      <% } %>
+    </ul>
+
+
   </body>
 </html>

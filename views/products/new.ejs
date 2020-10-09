@@ -13,6 +13,11 @@
     <form action="/products" method="POST">
 
       <div>
+        <select name="user">
+          <% users.forEach((user) => { %>
+            <option value="<%= user.id %>"><%= user.name %></option>
+          <% }) %>
+        </select>
       <label for="type">For Sale: </label>
       <input id="type" name="type" type="text"></input>
       </div>
