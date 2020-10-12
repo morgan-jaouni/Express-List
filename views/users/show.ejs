@@ -25,8 +25,13 @@
       </div>
       <div class="user-listings">
         <h3>Current Listings</h3>
-        
-          
+        <ul>
+        <% for (let i = 0; i < user.products.length; i++) { %>
+          <li>
+            <a href="/products/<%= user.products[i].id %>"><%= user.products[i].type %> </a>
+          </li>
+        <% } %> 
+        </ul>
         
 
        
