@@ -62,6 +62,31 @@ router.get('/:productId', (req,res) =>{
     });
 });
 
+// GET Edit
+
+router.get('/:productId/edit', (req, res) =>{
+    db.Product.findById(req.params.productId, (err, foundProduct) => {
+        if (err) return console.log(err);
+
+        const context = { product: foundProduct };
+
+        res.render('products/edit', context);
+    });
+});
+
+// PUT edit
+router.put('/:productId', (req, res) => {
+    db.Product.findByIdAndUpdate(
+        req.params.productId,
+        req.body,
+        { new: true },
+        (err, updatedProduct) => {
+            if (err) return console.log(err);
+            res.redirect(`/products/${updatedProduct.id}`);
+        }
+    );
+});
+
 // Delete
 router.delete('/:productId', (req, res) =>{
     const productId = req.params.productId;
