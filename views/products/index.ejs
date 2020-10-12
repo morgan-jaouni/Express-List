@@ -13,11 +13,11 @@
     <%- include('../partials/navbar') %> 
 
     <div class="listing-div">
-      <h1>Current Listings</h1>
+      <h1 class="text-center">Current Listings</h1>
     <ul class="list-items">
       <% for(let i = 0; i < products.length; i++) { %> 
         <li>
-          <a href="/products/<%= products[i].id %>"><%= products[i].type %> </a>
+          <a class = "list-anchor" href="/products/<%= products[i].id %>"><%= products[i].type %> $<%= products[i].price %></a>
         </li>
       <% } %>
     </ul>

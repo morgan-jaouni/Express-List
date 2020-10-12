@@ -18,8 +18,9 @@ body {
 .nav-bar {
   background: #e2f3f5;
   position: absolute;
+  top:0%;
   min-height: 25%;
-  width: 10%;
+  width: 7%;
   border-radius: 5%;
 }
 .navbar-links {
@@ -52,6 +53,8 @@ list-style: none;
 
 .login-box {
   background: #e2f3f5;
+  position: relative;
+  top: 24%;
   width: 35%;
   min-height: 40%;
   margin: 0 auto;
