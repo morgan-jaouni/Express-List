@@ -55,8 +55,9 @@ router.get('/:productId', (req,res) =>{
     .exec((err, productById) => {
         if(err) return console.log(err);
         console.log(productById);
+        const context = { product: productById };
 
-        res.render('products/show', productById)
+        res.render('products/show', context);
 
     });
 });
