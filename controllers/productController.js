@@ -6,7 +6,7 @@ const db = require('../models');
 //Get Index
 router.get('/', (req,res) => {
     
-    db.Product.findById({}, (err, allProducts) => {
+    db.Product.find({}, (err, allProducts) => {
     
         if (err) return console.log(err);
 
@@ -37,7 +37,12 @@ router.post('/', (req,res) => {
 
     db.User.findById(req.body.user, (err, foundUser) =>{
         if (err) return console.log(err);
-        res.redirect(`/products/${newProduct.id}`);
+        foundUser.products.push(newProduct._id);
+        foundUser.save((err, savedUser) => {
+            if (err) return console.log(err);
+
+            res.redirect(`/products/${newProduct.id}`);
+        });
     }); 
   });
 });
@@ -49,6 +54,7 @@ router.get('/:productId', (req,res) =>{
     .populate('user')
     .exec((err, productById) => {
         if(err) return console.log(err);
+        console.log(productById);
 
         res.render('products/show', productById)
 

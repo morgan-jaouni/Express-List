@@ -22,6 +22,8 @@ const ctrl = require('./controllers');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+// Method Override
+app.use(methodOverride('_method'));
 
 // Routes
 
@@ -30,20 +32,16 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-// POST New user
-app.post('/users', (req, res) => {
-  db.User.create(req.body, (err, newUser) => {
-    if (err) return console.log(err);
-
-    res.redirect('/users');
-  })
-});
 
 //Products Index
 app.use('/products', ctrl.products);
 
 //Users Index
 app.use('/users', ctrl.users);
+
+app.use('*', (req, res) => {
+  res.render('404');
+});
 
 
 
