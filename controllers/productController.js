@@ -62,5 +62,24 @@ router.get('/:productId', (req,res) =>{
     });
 });
 
+// Delete
+router.delete('/:productId', (req, res) =>{
+    const productId = req.params.productId;
+
+    db.Product.findByIdAndDelete(productId, (err) => {
+        if (err) return console.log(err);
+
+        db.User.findOne({'products' : productId}, (err, foundUser) => {
+            if (err) return console.log(err);
+
+            foundUser.products.remove(productId);
+            foundUser.save((err, updatedUser) => {
+                if (err) return console.log(err);
+
+            })
+        })
+        res.redirect('/products');
+    });
+});
 
 module.exports = router;
