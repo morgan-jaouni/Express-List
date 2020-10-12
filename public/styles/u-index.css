@@ -2,7 +2,7 @@ h1 {
     color:#22d1ee;
 }
 
-.listing-div {
+.seller-div {
     background: #e2f3f5;
     margin: 0 auto;
     padding: 30px;
@@ -12,13 +12,13 @@ h1 {
     border-radius: 5%;
 }
 
-.list-items {
+.sellers-items {
     color: #22d1ee;
     font-size: 22px;
 }
-.list-anchor {
-    color: #22d1ee;
+.sellers-anchor {
+    color: #22d1ee; 
 }
-.list-anchor:hover{
-    color:#22d1ee;
-    }
+.sellers-anchor:hover {
+    color: #22d1ee;  
+}

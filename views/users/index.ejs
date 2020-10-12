@@ -3,20 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/u-index.css">
     <title>Express List</title>
   </head>
   <body>
-    <h1>View Users</h1>
     <%- include('../partials/navbar') %>
 
-    <h2>Sellers</h2>
-
-    <ul>
+    <h1 class="text-center">Current Sellers</h1>
+  <div class="seller-div">
+    <ul class="sellers-items">
       <% for(let i = 0; i < users.length; i++) { %> 
         <li>
-          <a href="/users/<%= users[i].id %>"><%= users[i].name %> </a>
+          <a class="sellers-anchor" href="/users/<%= users[i].id %>"><%= users[i].name %> </a>
         </li>
       <% } %>
     </ul>
+ </div>
   </body>
 </html>
