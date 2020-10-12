@@ -47,6 +47,10 @@ app.use('/products', ctrl.products);
 //Users Index
 app.use('/users', ctrl.users);
 
+app.use('*', (req, res) => {
+  res.render('404');
+});
+
 
 
 // Listener
