@@ -3,19 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/p-index.css">
     <title>Express List</title>
   </head>
-  <body>
-    <h1>Products Index</h1>
+  <body class="container-fluid">
+    
     <%- include('../partials/navbar') %> 
 
-    <ul>
+    <h1 class="text-center">Current Listings</h1>
+    <div class="listing-div">
+    <ul class="list-items">
       <% for(let i = 0; i < products.length; i++) { %> 
         <li>
-          <a href="/products/<%= products[i].id %>"><%= products[i].type %> </a>
+          <a class = "list-anchor" href="/products/<%= products[i].id %>"><%= products[i].type %> $<%= products[i].price %></a>
         </li>
       <% } %>
     </ul>
+  </div>
 
 
   </body>

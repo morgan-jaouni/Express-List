@@ -1,0 +1,24 @@
+h1 {
+    color:#22d1ee;
+}
+
+.seller-div {
+    background: #e2f3f5;
+    margin: 0 auto;
+    padding: 30px;
+    color:#22d1ee;
+    width: 65%;
+    min-height: 90%;
+    border-radius: 5%;
+}
+
+.sellers-items {
+    color: #22d1ee;
+    font-size: 22px;
+}
+.sellers-anchor {
+    color: #22d1ee; 
+}
+.sellers-anchor:hover {
+    color: #22d1ee;  
+}
