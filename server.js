@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-require('bootstrap');
 require('dotenv').config();
 const PORT = process.env.PORT || 4000;
 
@@ -11,6 +10,9 @@ const db = require('./models');
 
 // View Engine
 app.set('view engine', 'ejs');
+
+// Static Files
+app.use(express.static(__dirname + '/public'));
 
 // Controller
 const ctrl = require('./controllers');

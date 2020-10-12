@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Playfair Display', serif;
+  background: #22d1ee;
+  color: #e2f3f5;
+  height: 100vh;
+}
+
+.navbar-links {
+  color: #e2f3f5;
+}
+
+.btn {
+  background:  #22d1ee;
+}
+
+.button-text {
+  color: #0e153a;
+}
+
+.login-box {
+  background: #e2f3f5;
+  width: 35%;
+  min-height: 40%;
+  margin: 0 auto;
+  color: #22d1ee;
+  border-radius: 5%;
+}
