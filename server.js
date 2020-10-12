@@ -11,6 +11,9 @@ const db = require('./models');
 // View Engine
 app.set('view engine', 'ejs');
 
+// Static Files
+app.use(express.static(__dirname + '/public'));
+
 // Controller
 const ctrl = require('./controllers');
 
