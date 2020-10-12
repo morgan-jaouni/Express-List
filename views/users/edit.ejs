@@ -7,7 +7,29 @@
   </head>
   <body>
     <h1>Express List</h1>
-    <%- include('./partials/navbar') %> 
+    <%- include('../partials/navbar') %> 
 
+    <form action="/users/<%= user.id %>?_method=PUT" method="POST">
+
+      <div>
+      <label for="name">Name: </label>
+      <input id="name" name="name" type="text" value="<%= user.name %>"></input>
+      </div>
+      <div>
+      <label for="userName">Username: </label>
+      <input id="userName" name="userName" type="text" value="<%= user.userName %>"></input>
+      </div>
+      <div>
+      <label for="password">Password: </label>
+      <input id="password" name="password" type="text" value="<%= user.password %>"></input>
+      </div>
+      <div>
+      <label for="location">Location: </label>
+      <input id="location" name="location" type="text" value="<%= user.location %>"></input>
+      </div>
+      <button type="submit">Update</button>
+      </form>
+
+    
   </body>
 </html>
