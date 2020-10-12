@@ -45,8 +45,25 @@ router.get('/:userId', (req, res) => {
     });
 });
 
+//User Delete 
+router.delete('/:userId', (req,res) => {
+
+    //query db
+    db.User.findByIdAndDelete(req.params.userId, (err, deleteUser) => {
+      if (err) return console.log(err);
+
+    db.Product.deleteMany({_id: {$in: deleteUser.products}}, (err) => {
+      if (err) return console.log(err);
+      
+      //redirect to users index
+      res.redirect('/users');
+
+    }); 
+  });
+});
 
 
+//User Update
 
 
 module.exports = router;
