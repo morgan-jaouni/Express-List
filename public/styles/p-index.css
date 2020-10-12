@@ -1,0 +1,15 @@
+
+
+.listing-div {
+    background: #e2f3f5;
+    color:#22d1ee;
+    width: 65%;
+    min-height: 100%;
+    margin: 0 auto;
+    border-radius: 5%;
+}
+
+.list-items {
+    list-style: none;
+    color: #22d1ee;
+}
