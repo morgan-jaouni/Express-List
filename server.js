@@ -22,6 +22,8 @@ const ctrl = require('./controllers');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+// Method Override
+app.use(methodOverride('_method'));
 
 // Routes
 
