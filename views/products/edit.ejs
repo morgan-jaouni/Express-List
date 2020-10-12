@@ -7,7 +7,27 @@
   </head>
   <body>
     <h1>Express List</h1>
-    <%- include('./partials/navbar') %> 
+    <%- include('../partials/navbar') %> 
 
+
+    <form action="/products/<%= product.id %>?_method=PUT" method="POST">
+      <div>
+        <label for="type">For Sale: </label>
+        <input type="text" name="type" value="<%= product.type %>" />
+      </div>
+      <div>
+        <label for="price">Price: </label>
+        <input type="text" name="price" value="<%= product.price %>" />
+      </div>
+      <div>
+        <label for="condition">Condition: </label>
+        <input type="text" name="condition" value="<%= product.condition %>" />
+      </div>
+      <div>
+        <label for="image">Image: </label>
+        <input type="text" name="image" value="<%= product.image %>" />
+      </div>
+      <input type="submit" />
+    </form>
   </body>
 </html>

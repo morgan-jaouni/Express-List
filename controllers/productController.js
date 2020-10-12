@@ -55,11 +55,56 @@ router.get('/:productId', (req,res) =>{
     .exec((err, productById) => {
         if(err) return console.log(err);
         console.log(productById);
+        const context = { product: productById };
 
-        res.render('products/show', productById)
+        res.render('products/show', context);
 
     });
 });
 
+// GET Edit
+
+router.get('/:productId/edit', (req, res) =>{
+    db.Product.findById(req.params.productId, (err, foundProduct) => {
+        if (err) return console.log(err);
+
+        const context = { product: foundProduct };
+
+        res.render('products/edit', context);
+    });
+});
+
+// PUT edit
+router.put('/:productId', (req, res) => {
+    db.Product.findByIdAndUpdate(
+        req.params.productId,
+        req.body,
+        { new: true },
+        (err, updatedProduct) => {
+            if (err) return console.log(err);
+            res.redirect(`/products/${updatedProduct.id}`);
+        }
+    );
+});
+
+// Delete
+router.delete('/:productId', (req, res) =>{
+    const productId = req.params.productId;
+
+    db.Product.findByIdAndDelete(productId, (err) => {
+        if (err) return console.log(err);
+
+        db.User.findOne({'products' : productId}, (err, foundUser) => {
+            if (err) return console.log(err);
+
+            foundUser.products.remove(productId);
+            foundUser.save((err, updatedUser) => {
+                if (err) return console.log(err);
+
+            })
+        })
+        res.redirect('/products');
+    });
+});
 
 module.exports = router;

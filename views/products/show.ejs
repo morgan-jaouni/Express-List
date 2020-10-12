@@ -6,8 +6,23 @@
     <title>Express List</title>
   </head>
   <body>
-    <h1>Products For Sale</h1>
+    <h1>Product For Sale</h1>
     <%- include('../partials/navbar') %> 
 
+    <div>
+      <h2><%= product.type %> </h2>
+      <p><%= product.price %> </p>
+    </div>
+    <img src="<%= product.image %>" alt="" />
+    <a href="/users/<%= product.user.id %>"><%= product.user.userName %> </a>
+    <p><%= product.condition %> </p>
+
+    <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+      <input type="submit" value="Delete">
+    </form>
+
+    <form action="/products/<%= product.id %>/edit" method="GET">
+      <input type="submit" value="Update">
+    </form>
   </body>
 </html>
