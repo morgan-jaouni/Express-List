@@ -1,0 +1,35 @@
+h1 {
+  color:#22d1ee;
+}
+
+.product-container {
+    background: #e2f3f5;
+    margin: 0 auto;
+    padding: 30px;
+    color:#22d1ee;
+    width: 65%;
+    min-height: 90%;
+    border-radius: 5%;
+}
+
+.product-text {
+    color: #22d1ee;
+    font-size: 22px;
+}
+
+.product-image {
+  display: block;
+  width: 50%;
+  margin: 4em 0;
+}
+
+.show-product-form {
+  display: inline;
+}
+
+.user-name-link {
+  color: #22d1ee;
+}
+.user-name-link:hover{
+  color:#22d1ee;
+  }
