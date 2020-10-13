@@ -3,31 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/p-edit.css">
     <title>Express List</title>
   </head>
   <body>
-    <h1>Express List</h1>
+    <div class="row justify-content-center">
+      <h1>Express List</h1>
+    </div>
     <%- include('../partials/navbar') %> 
 
 
-    <form action="/products/<%= product.id %>?_method=PUT" method="POST">
-      <div>
+    <form class="edit-box" action="/products/<%= product.id %>?_method=PUT" method="POST">
+      <div class="input-containers">
         <label for="type">For Sale: </label>
-        <input type="text" name="type" value="<%= product.type %>" />
+        <input class="text-input" type="text" name="type" value="<%= product.type %>" />
       </div>
-      <div>
+      <div class="input-containers">
         <label for="price">Price: </label>
-        <input type="text" name="price" value="<%= product.price %>" />
+        <input class="text-input" type="text" name="price" value="<%= product.price %>" />
       </div>
-      <div>
+      <div class="input-containers">
         <label for="condition">Condition: </label>
-        <input type="text" name="condition" value="<%= product.condition %>" />
+        <input class="text-input" type="text" name="condition" value="<%= product.condition %>" />
       </div>
-      <div>
+      <div class="input-containers">
         <label for="image">Image: </label>
-        <input type="text" name="image" value="<%= product.image %>" />
+        <input class="text-input" type="text" name="image" value="<%= product.image %>" />
       </div>
-      <input type="submit" />
+      <input class="btn mt-3" type="submit" />
     </form>
   </body>
 </html>
