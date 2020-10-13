@@ -3,31 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/u-edit.css">
     <title>Express List</title>
   </head>
   <body>
-    <h1>Express List</h1>
+    <div class="row justify-content-center">
+      <h1>Express List</h1>
+    </div>
     <%- include('../partials/navbar') %> 
 
-    <form action="/users/<%= user.id %>?_method=PUT" method="POST">
+    <form class="edit-box" action="/users/<%= user.id %>?_method=PUT" method="POST">
 
       <div>
       <label for="name">Name: </label>
-      <input id="name" name="name" type="text" value="<%= user.name %>"></input>
+      <input class="text-input" id="name" name="name" type="text" value="<%= user.name %>"></input>
       </div>
       <div>
       <label for="userName">Username: </label>
-      <input id="userName" name="userName" type="text" value="<%= user.userName %>"></input>
+      <input class="text-input" id="userName" name="userName" type="text" value="<%= user.userName %>"></input>
       </div>
       <div>
       <label for="password">Password: </label>
-      <input id="password" name="password" type="text" value="<%= user.password %>"></input>
+      <input class="text-input" id="password" name="password" type="text" value="<%= user.password %>"></input>
       </div>
       <div>
       <label for="location">Location: </label>
-      <input id="location" name="location" type="text" value="<%= user.location %>"></input>
+      <input class="text-input" id="location" name="location" type="text" value="<%= user.location %>"></input>
       </div>
-      <button type="submit">Update</button>
+      <button class="btn mt-3" type="submit">Update</button>
       </form>
 
     
