@@ -15,36 +15,36 @@
     <%- include('./partials/navbar') %> 
 
 
-    <div class="sign-cover"
-  <div class="user row justify-content-center">
-    <span class="user-cover">
-      <p id="sign-up">Sign Up!</p>
-    </span>
-  <section class="row login-box justify-content-center text-center">
-    <div class="align-self-center">
-      <h2 class="py-3">Create A Profile!</h2>
-      <form class="user-box" action="/users" method="POST">
-        <div>
-        <label for="name">Name: </label>
-        <input class="text-input" id="name" name="name" type="text"></input>
-        </div>
-        <div>
-        <label for="userName">Username: </label>
-        <input class="text-input" id="userName" name="userName" type="text"></input>
-        </div>
-        <div>
-        <label for="password">Password: </label>
-        <input class="text-input" id="password" name="password" type="text"></input>
-        </div>
-        <div>
-        <label for="location">Location: </label>
-        <input class="text-input" id="location" name="location" type="text"></input>
-        </div>
-        <button class="btn mt-3" type="submit">Sign Up</button>
-        </form>
-        </div>
-      </section>
-  </div>
-</div>
+    <div class="sign-cover">
+      <div class="user row justify-content-center">
+        <span class="user-cover">
+          <p id="sign-up">Sign Up!</p>
+        </span>
+        <section class="row login-box justify-content-center text-center">
+          <div class="align-self-center">
+            <h2 class="py-3">Create A Profile!</h2>
+            <form class="user-box" action="/users" method="POST">
+              <div class="form-items">
+              <!-- <label for="name">Name: </label> -->
+              <input class="text-input" id="name" name="name" type="text" placeholder="Name"></input>
+              </div>
+              <div class="form-items">
+              <!-- <label for="userName">Username: </label> -->
+              <input class="text-input" id="userName" name="userName" type="text" placeholder="Username"></input>
+              </div>
+              <div class="form-items">
+              <!-- <label for="password">Password: </label> -->
+              <input class="text-input" id="password" name="password" type="text" placeholder="Password"></input>
+              </div>
+              <div class="form-items">
+              <!-- <label for="location">Location: </label> -->
+              <input class="text-input" id="location" name="location" type="text" placeholder="Location"></input>
+              </div>
+              <button class="btn mt-3" type="submit">Sign Up</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
