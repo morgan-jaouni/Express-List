@@ -1,0 +1,24 @@
+
+
+section {
+  background: #e2f3f5;
+    margin: 0 auto;
+    padding: 30px;
+    color:#22d1ee;
+    width: 65%;
+    min-height: 90%;
+    border-radius: 5%;
+}
+
+.button-anchor {
+  color: #0e153a;
+}
+
+.button-anchor:hover {
+  color: #0e153a;
+  text-decoration: none;
+}
+
+.user-form-buttons {
+  display: inline;
+}
