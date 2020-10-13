@@ -3,31 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/u-new.css">
     <title>Express List</title>
   </head>
   <body>
-    <h1>Express List</h1>
+
+    <h1 class="row justify-content-center">Express List</h1>
     <%- include('../partials/navbar') %> 
 
-    <form action="/users" method="POST">
-
+    
+    <form class="user-box" action="/users" method="POST">
       <div>
       <label for="name">Name: </label>
-      <input id="name" name="name" type="text"></input>
+      <input class="text-input" id="name" name="name" type="text"></input>
       </div>
       <div>
       <label for="userName">Username: </label>
-      <input id="userName" name="userName" type="text"></input>
+      <input class="text-input" id="userName" name="userName" type="text"></input>
       </div>
       <div>
       <label for="password">Password: </label>
-      <input id="password" name="password" type="text"></input>
+      <input class="text-input" id="password" name="password" type="text"></input>
       </div>
       <div>
       <label for="location">Location: </label>
-      <input id="location" name="location" type="text"></input>
+      <input class="text-input" id="location" name="location" type="text"></input>
       </div>
-      <button type="submit">Sign Up</button>
+      <button class="btn mt-3" type="submit">Sign Up</button>
       </form>
+    
   </body>
 </html>

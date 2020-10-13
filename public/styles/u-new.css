@@ -1,0 +1,23 @@
+
+h1 {
+    color:#22d1ee;
+}
+
+
+.user-box {
+    background: #e2f3f5;
+      margin: 0 auto;
+      padding: 30px;
+      color:#22d1ee;
+      width: 65%;
+      min-height: 90%;
+      border-radius: 5%;
+  }
+
+.text-input {
+    display: block;
+    background-color: rgba(0, 0, 0, .05);
+    border: none;
+    position: relative;
+    left: 3%;
+  }
