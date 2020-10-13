@@ -5,13 +5,39 @@
   padding: 0;
   box-sizing: border-box;
 }
-h1 {
-  color: silver;
-}
 
-h2 {
-  color: silver;
-}
+  /* <!-- //modeled after https://freefrontend.com/css-text-animations/ --> */
+
+  @font-face {
+    font-family: Clip;
+    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+  }
+       
+  h1 {
+    position: absolute;                      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 2;
+    left: 50%;
+    top: 5%;
+    font-family: "Clip";
+    font-size: 3.5em;
+    color: #ffe6ff;
+    /* text-shadow:  0 0 1.5rem #ffe6ff,
+      -0.2rem 0.1rem 1rem #ffe6ff, 0.2rem 0.1rem 1rem #ffe6ff,
+      0 -0.5rem 2rem #ffe6ff, 0 0.5rem 3rem #ffe6ff;
+    animation: shine 2s forwards, flicker 3s infinite; */
+    
+  } 
+
+  
+  h2 {
+    color:#ffe6ff;
+  } 
 
 body {
   font-size: 16px;
@@ -19,7 +45,7 @@ body {
   background:  url('../Images/pexels-trushotz-3635300_adjustment-one.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  color: silver;
+  color: #ffe6ff;
   height: 100vh;
   width: 100vw;
   padding: 0;
@@ -33,18 +59,18 @@ body {
   border-radius: 5%;
 }
 .navbar-links {
-  color: silver;
+  color: #ffe6ff;
   /* background: #e2f3f5; */
 }
 .navbar-links:hover{
-color: silver;
+color: #ffe6ff;
 }
 .nav-items {
-list-style: none;
+list-style: none;                 
 }
 
 .btn {
-  background:  silver;
+  background:  #ffe6ff;
 
 }
 .btn:hover{
@@ -74,7 +100,7 @@ list-style: none;
     transition: transform .3s linear;
 }
 .user-cover {
-  background: black;
+  background: #ffe6ff;
   margin: 0 auto;
   width: 100%;
   height: 100%;
@@ -103,7 +129,7 @@ transform: translateX(-110%);
 }
 
 #sign-up {
-  color: silver;
+  color: black;
   position: relative;
   top:35%
 }
@@ -117,5 +143,5 @@ transform: translateX(-110%);
   margin: 8px;
   background-color: rgba(0, 0, 0, 0.4);
   border: none;
-  border-bottom: solid 2px silver;
+  border-bottom: solid 2px #ffe6ff;
 }
