@@ -49,6 +49,7 @@ body {
   height: 100vh;
   width: 100vw;
   padding: 0;
+  margin: 0;
 }
 .nav-bar {
   /* background: #e2f3f5; */
@@ -129,6 +130,8 @@ transform: translateX(-110%);
 }
 
 #sign-up {
+  font-family: Clip;
+  font-weight: 700;
   color: black;
   position: relative;
   top:35%
@@ -144,4 +147,14 @@ transform: translateX(-110%);
   background-color: rgba(0, 0, 0, 0.4);
   border: none;
   border-bottom: solid 2px #ffe6ff;
+}
+
+footer {
+
+  height: 5%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 0%;
 }

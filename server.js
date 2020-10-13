@@ -34,6 +34,14 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+// POST New user
+app.post('/users', (req, res) => {
+  db.User.create(req.body, (err, newUser) => {
+    if (err) return console.log(err);
+
+    res.redirect('/users');
+  })
+});
 
 //Products Index
 app.use('/products', ctrl.products);
