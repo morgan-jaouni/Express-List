@@ -1,11 +1,11 @@
 
 h1 {
-    color:#22d1ee;
+    color:#ffe6ff;
 }
 
 
 .user-box {
-    background: #e2f3f5;
+      background-color: rgba(0, 0, 0, .5);
       margin: 0 auto;
       padding: 30px;
       color:#22d1ee;

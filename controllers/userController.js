@@ -21,14 +21,7 @@ router.get('/new', (req, res) => {
 });
 
 
-// POST New user
-router.post('/', (req, res) => {
-  db.User.create(req.body, (err, newUser) => {
-    if (err) return console.log(err);
 
-    res.redirect('/users');
-  })
-});
 
 // GET Users show page
 router.get('/:userId', (req, res) => {
