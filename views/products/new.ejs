@@ -3,38 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/p-new.css">
     <title>Express List</title>
   </head>
   <body>
-    <h1> List An Item! </h1>
     <%- include('../partials/navbar') %> 
 
 
-    <form action="/products" method="POST">
+    <div class="row justify-content-center">
+    <h1> List An Item! </h1>
+    </div>
+    
+    
+<form class="p-new-box" action="/products" method="POST">
+<div>
 
-      <div>
-        <select name="user">
-          <% users.forEach((user) => { %>
-            <option value="<%= user.id %>"><%= user.name %></option>
+      <select class="select-box mt-3 mb-3" name="user">
+        <% users.forEach((user) => { %>
+          <option value="<%= user.id %>"><%= user.name %></option>
           <% }) %>
-        </select>
+      </select>
       <label for="type">For Sale: </label>
-      <input id="type" name="type" type="text"></input>
+      <input class="text-input" id="type" name="type" type="text"></input>
       </div>
       <div>
       <label for="price">Price: </label>
-      <input id="price" name="price" type="text"></input>
+      <input class="text-input" id="price" name="price" type="text"></input>
       </div>
       <div>
       <label for="condition">Condition: </label>
-      <input id="condition" name="condition" type="text"></input>
+      <input class="text-input" id="condition" name="condition" type="text"></input>
       </div>
       <div>
       <label for="image">Image: </label>
-      <input id="image" name="image" type="text"></input>
+      <input class="text-input" id="image" name="image" type="text"></input>
       </div>
-      <button type="submit">Create</button>
+      <div>
+      <button class="btn mt-3" type="submit">Create</button>
       </form>
+      </div>
+  </div>
+
+  
   </body>
 </html>
