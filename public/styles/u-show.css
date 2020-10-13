@@ -1,4 +1,6 @@
-
+h1 {
+  color: #22d1ee;
+}
 
 section {
   background: #e2f3f5;
@@ -21,4 +23,12 @@ section {
 
 .user-form-buttons {
   display: inline;
+}
+
+.user-products {
+  color:#22d1ee;
+}
+
+.user-products:hover {
+  color:#22d1ee;
 }

@@ -33,7 +33,7 @@
         <ul>
         <% for (let i = 0; i < user.products.length; i++) { %>
           <li>
-            <a href="/products/<%= user.products[i].id %>"><%= user.products[i].type %> </a>
+            <a class="user-products" href="/products/<%= user.products[i].id %>"><%= user.products[i].type %> </a>
           </li>
         <% } %> 
         </ul>
