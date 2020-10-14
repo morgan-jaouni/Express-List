@@ -16,8 +16,9 @@ h1 {
 
 .text-input {
     display: block;
-    background-color: rgba(0, 0, 0, .05);
+    background-color: rgba(0, 0, 0, .5);
     border: none;
     position: relative;
     left: 3%;
+    outline: none;
   }
