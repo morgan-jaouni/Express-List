@@ -135,7 +135,7 @@ transform: translateX(-110%);
   font-weight: 700;
   position: relative;
   top:35%;
-  
+  outline: none;
 }
 #sign-up:hover{
         transform: scale(1.2);
@@ -155,6 +155,7 @@ transform: translateX(-110%);
 .text-input {
   width: 100%;
   margin: 8px;
+  color: #ffe6ff;
   background-color: rgba(0, 0, 0, 0.4);
   border: none;
   border-bottom: solid 2px #ffe6ff;
