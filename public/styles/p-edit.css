@@ -3,19 +3,21 @@ h1 {
 }
 
 .edit-box {
-    background-color: rgba(0, 0, 0, .5);
-    margin: 0 auto;
-    padding: 30px;
-    color:#ffe6ff;
-    width: 65%;
-    min-height: 90%;
-    border-radius: 5%;
+  background-color: rgba(0, 0, 0, .5);
+  margin: 70px auto;
+  padding: 30px;
+  color:#ffe6ff;
+  width: 65%;
+  min-height: 90%;
+  border-radius: 5%;
 }
 
 .text-input {
   display: block;
-  background-color: rgba(0, 0, 0, .05);
+  background-color: rgba(255, 255, 255, .2);
+  border-bottom: solid 2px #ffe6ff;
   border: none;
   position: relative;
   left: 3%;
+  width: 25%;
 }
