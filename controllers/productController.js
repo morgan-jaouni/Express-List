@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const api = process.env.API_KEY;
 
 const db = require('../models');
 
@@ -55,7 +56,7 @@ router.get('/:productId', (req,res) =>{
     .exec((err, productById) => {
         if(err) return console.log(err);
         console.log(productById);
-        const context = { product: productById };
+        const context = { product: productById, api: api };
 
         res.render('products/show', context);
 

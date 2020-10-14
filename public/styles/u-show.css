@@ -3,6 +3,7 @@ h1 {
 }
 
 section {
+    position: relative;
     background-color: rgba(0, 0, 0, .5);
     margin: 70px auto;
     padding: 30px;
@@ -31,4 +32,12 @@ section {
 
 .user-products:hover {
   color:#ffe6ff;
+}
+
+.show-map {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 50%;
+  height: 35%;
 }
