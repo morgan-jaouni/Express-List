@@ -5,7 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  overflow: hidden;
+}
   /* <!-- //modeled after https://freefrontend.com/css-text-animations/ --> */
 
   @font-face {

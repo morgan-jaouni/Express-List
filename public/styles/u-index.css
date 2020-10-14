@@ -4,11 +4,11 @@ h1 {
 
 .seller-div {
     background-color: rgba(0, 0, 0, .5);
-    margin: 0 auto;
+    margin: 70px auto;
     padding: 30px;
     color:#ffe6ff;
     width: 65%;
-    min-height: 90%;
+    min-height: 80%;
     border-radius: 5%;
 }
 
