@@ -2,6 +2,6 @@
 
 $('#sign-up').on("click", (event) => {
 
-$('.user-cover').css("display","none");
+$('.user-cover').animate({right: '110%'});
 
 });
