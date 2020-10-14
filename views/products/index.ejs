@@ -17,7 +17,7 @@
     <div class="listing-div mb-0">
     <ul class="list-items">
       <% for(let i = 0; i < products.length; i++) { %> 
-        <li>
+        <li class="search">
           <a class = "list-anchor" href="/products/<%= products[i].id %>"><%= products[i].type %> $<%= products[i].price %></a>
         </li>
       <% } %>
