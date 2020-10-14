@@ -15,11 +15,13 @@
   <body class="container-fluid p-0 m-0">
     <header class="row justify-content-center">
       <h1>Express List</h1>
-
     </header>
-    <%- include('./partials/navbar') %> 
-    
 
+    <%- include('./partials/navbar') %> 
+    <div class="search-bar row justify-content-end mt-3">
+      <input id="input-bar" type="text">
+      <button id="search-btn">Search</button>
+  </div>
 
     <div class="sign-cover">
       <div class="user row justify-content-center">
@@ -46,7 +48,7 @@
               <!-- <label for="location">Location: </label> -->
               <input class="text-input" id="location" name="location" type="text" placeholder="Location"></input>
               </div>
-              <button class="btn mt-3" type="submit">Sign Up</button>
+              <button class="btn mt-3" type="submit">Sign Up!</button>
             </form>
           </div>
         </section>

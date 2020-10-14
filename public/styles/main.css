@@ -76,10 +76,6 @@ list-style: none;
   background:  #ffe6ff;
 
 }
-.btn:hover{
-  transform: scale(1.2);
-  
-}
 
 .button-text {
   color: #0e153a;
@@ -138,7 +134,18 @@ transform: translateX(-110%);
   font-family: Clip;
   font-weight: 700;
   position: relative;
-  top:35%
+  top:35%;
+  
+}
+#sign-up:hover{
+        transform: scale(1.2);
+}
+#search-btn {
+  background-color: black;
+  color:#ffe6ff;
+  font-family: Clip;
+  font-weight: 700;
+  outline:none;
 }
 
 .form-items {
@@ -151,10 +158,10 @@ transform: translateX(-110%);
   background-color: rgba(0, 0, 0, 0.4);
   border: none;
   border-bottom: solid 2px #ffe6ff;
+  outline: none;
 }
 
 footer {
-
   height: 5%;
   width: 100%;
   padding: 0;
@@ -162,3 +169,17 @@ footer {
   position: absolute;
   bottom: 0%;
 }
+
+.search-bar {
+  margin: auto;
+  width:90%;
+  text-decoration: none;
+  outline: none;
+}
+#input-bar {
+  outline: none;
+  background-color: #ffe6ff;
+  
+}
+
+
