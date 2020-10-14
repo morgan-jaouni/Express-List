@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const api = process.env.API_KEY;
 
 const db = require('../models');
 
@@ -32,7 +33,7 @@ router.get('/:userId', (req, res) => {
 
       console.log('foundUser: ', foundUser);
 
-      const context = { user: foundUser };
+      const context = { user: foundUser, api: api };
       
       res.render('users/show', context);
     });

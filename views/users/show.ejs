@@ -45,27 +45,17 @@
         <form class="user-form-buttons" action="/users/<%= user.id %>/edit" method="GET">
           <input class="btn" type="submit" value="Update">
         </form>
-
-        <div id="map"></div>
-       
       </div>
+      <iframe
+        class="show-map"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=<%= api %> 
+          &q=<%= user.location %>" allowfullscreen>
+      </iframe>
     </section>
 
     <%- include('../partials/footer') %> 
-    <script>
-      // Initialize and add the map
-      function initMap() {
-        // The location of Uluru
-        var uluru = {lat: -25.344, lng: 131.036};
-        // The map, centered at Uluru
-        var map = new google.maps.Map(
-            document.getElementById('map'), {zoom: 4, center: uluru});
-        // The marker, positioned at Uluru
-        var marker = new google.maps.Marker({position: uluru, map: map});
-      }
-          </script>
-    <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCtuOux4U12g2OwrVO10bf48jy8I-PPUI&callback=initMap">
-  </script>
+
+    
   </body>
 </html>
