@@ -20,6 +20,6 @@ function searchBar() {
         } 
         else { 
             x[i].style.display="search";                  
-        } 
-    } 
-}
+        };
+    };
+};
