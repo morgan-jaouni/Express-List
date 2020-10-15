@@ -34,10 +34,14 @@ section {
   color:#ffe6ff;
 }
 
+p {
+  font-size: 18px;
+}
+
 .show-map {
   position: absolute;
-  top: 5%;
+  top: 25%;
   right: 5%;
   width: 50%;
-  height: 35%;
+  height: 45%;
 }
