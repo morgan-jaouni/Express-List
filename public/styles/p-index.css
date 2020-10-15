@@ -15,10 +15,14 @@ h1 {
 .list-items {
     color: #ffe6ff;
     font-size: 22px;
+    
 }
 .list-anchor {
     color: #ffe6ff;
+    font-size: 22px;
+    line-height: 70px;
 }
+
 .list-anchor:hover{
     color:#ffe6ff;
     }
