@@ -9,19 +9,20 @@ h1 {
     padding: 30px;
     color:#ffe6ff;
     width: 65%;
-    min-height: 90%;
+    min-height: 80%;
     border-radius: 5%;
 }
 
 .product-text {
     color: #ffe6ff;
     font-size: 22px;
+    display: block;
 }
 
 .product-image {
   display: block;
   width: 50%;
-  margin: 4em 0;
+  margin: 12em 0;
 }
 
 .show-product-form {
@@ -37,8 +38,13 @@ h1 {
 
   .show-map {
     position: absolute;
-    top: 5%;
+    top: 25%;
     right: 5%;
-    width: 50%;
-    height: 35%;
+    width: 40%;
+    height: 45%;
+  }
+
+  .location {
+    position: relative;
+    left:44%;
   }

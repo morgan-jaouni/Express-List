@@ -18,6 +18,7 @@ h1 {
 }
 .sellers-anchor {
     color: #ffe6ff; 
+    line-height: 70px;
 }
 .sellers-anchor:hover {
     color: #ffe6ff;  
