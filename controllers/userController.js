@@ -28,12 +28,20 @@ router.get('/:userId', (req, res) => {
     .populate('products')
     .exec((err, foundUser) => {
       if(err) return console.log(err);
+      db.Product.find({}, (err, allProducts) => {
+        if (err) return console.log(err);
+  
 
-      console.log('foundUser: ', foundUser);
-
-      const context = { user: foundUser, api: api };
-      
-      res.render('users/show', context);
+        console.log('foundUser: ', foundUser);
+  
+        const context = {
+          user: foundUser,
+          api: api,
+          products: allProducts,
+        };
+        
+        res.render('users/show', context);
+      });
     });
 });
 
