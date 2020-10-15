@@ -9,10 +9,16 @@ const db = require('../models');
 router.get('/', (req,res) => {
   db.User.find({}, (err, allUsers) => {
     if (err) return console.log(err);
+    db.Product.find({}, (err, allProducts) => {
+      if (err) return console.log(err);
 
-    const context = { users: allUsers };
-
-    res.render('users/index', context);
+      const context = {
+        users: allUsers,
+        products: allProducts,
+      };
+  
+      res.render('users/index', context);
+    });
   });
 });
 
