@@ -84,10 +84,17 @@ router.get('/:productId', (req,res) =>{
 router.get('/:productId/edit', (req, res) =>{
     db.Product.findById(req.params.productId, (err, foundProduct) => {
         if (err) return console.log(err);
+        db.Product.find({}, (err, allProducts) => {
+            if (err) return console.log(err);
 
-        const context = { product: foundProduct };
+            const context = {
+                product: foundProduct, 
+                products: allProducts,
+            };
+    
+            res.render('products/edit', context);
+        });
 
-        res.render('products/edit', context);
     });
 });
 
