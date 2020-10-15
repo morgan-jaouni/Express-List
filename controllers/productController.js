@@ -18,15 +18,18 @@ router.get('/', (req,res) => {
 });
 
 
-//New Product 
+//GET New Product 
 router.get('/new', (req,res) => {
     db.User.find({}, (err, allUsers) => {
-
         if (err) return console.log(err);
-        const context = {
-            users: allUsers
-        }
-        res.render('products/new', context);
+        db.Product.find({}, (err, allProducts) => {
+
+            const context = {
+                users: allUsers,
+                products: allProducts,
+            }
+            res.render('products/new', context);
+        });
     });
 });
 
