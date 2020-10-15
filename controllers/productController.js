@@ -51,17 +51,29 @@ router.post('/', (req,res) => {
 
 //GET Show products
 router.get('/:productId', (req,res) =>{
-
+    
     db.Product.findById(req.params.productId)
     .populate('user')
     .exec((err, productById) => {
         if(err) return console.log(err);
-        console.log(productById);
-        const context = { product: productById, api: api };
 
-        res.render('products/show', context);
+        db.Product.find({}, (err, allProducts) => {
+            if (err) return console.log(err);
+            console.log(productById);
+            const context = {
+                product: productById,
+                api: api,
+                products: allProducts,
+            };
+
+            console.log(allProducts);
+    
+            res.render('products/show', context);
+    
+        });
 
     });
+
 });
 
 // GET Edit
