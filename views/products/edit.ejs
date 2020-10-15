@@ -10,10 +10,10 @@
   </head>
   <body>
     <div class="row justify-content-center">
-      <h1>Express List</h1>
+      <h1>Update Listing</h1>
     </div>
     <%- include('../partials/navbar') %> 
-
+    <%- include('../partials/searchbar') %>
 
     <form class="edit-box" action="/products/<%= product.id %>?_method=PUT" method="POST">
       <div class="input-containers">

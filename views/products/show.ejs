@@ -11,12 +11,15 @@
   <body>
     <h1 class="text-center">Product For Sale</h1>
     <%- include('../partials/navbar') %> 
+    <%- include('../partials/searchbar') %> 
 
     <div class="row product-container justify-content-start">
       <div class="col">
         <div class="row">
           <p class="p-3 product-text"><%= product.type %> </>
           <p class="p-3 product-text"> $ <%= product.price %> </p>
+          <p class="p-3 product-text">Location: <%= product.user.location %> </p>
+
         </div>
       <a class="product-text user-name-link" href="/users/<%= product.user.id %>"><%= product.user.userName %> </a>
     
@@ -31,6 +34,14 @@
         <input class="btn" type="submit" value="Update">
       </form>
     </div>
+
+      <iframe
+        class="show-map"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=<%= api %> 
+          &q=<%= product.user.location %>" allowfullscreen>
+      </iframe>
+
     </div>
 
     <%- include('../partials/footer') %> 
