@@ -11,26 +11,27 @@
   <body>
     <h1 class="text-center">Product For Sale</h1>
     <%- include('../partials/navbar') %> 
-
+    <%- include('../partials/searchbar') %> 
+    
     <div class="row product-container justify-content-start">
+      <a class="product-text user-name-link" href="/users/<%= product.user.id %>"><%= product.user.userName %> </a>
       <div class="col">
         <div class="row">
-          <p class="p-3 product-text"><%= product.type %> </>
-          <p class="p-3 product-text"> $ <%= product.price %> </p>
-          <p class="p-3 product-text">Location: <%= product.user.location %> </p>
+          <p class="p-3 product-text mt-5"><%= product.type %> </>
+          <p class="p-3 product-text mt-5"> $ <%= product.price %> </p>
+          <p class="location p-3 product-text mt-5">Location: <%= product.user.location %> </p>
 
         </div>
-      <a class="product-text user-name-link" href="/users/<%= product.user.id %>"><%= product.user.userName %> </a>
     
-      <img class="product-image" src="<%= product.image %>" alt="" />
-      <p class="product-text"><%= product.condition %> </p>
+      <img class="product-image mt-5" src="<%= product.image %>" alt="" />
+      <p class="product-text">Condition: <%= product.condition %> </p>
 
       <form class="show-product-form" action="/products/<%= product.id %>?_method=DELETE" method="POST">
-        <input class="btn mr-2" type="submit" value="Delete">
+        <input class="btn mr-2 mt-5" type="submit" value="Delete">
       </form>
 
       <form class="show-product-form" action="/products/<%= product.id %>/edit" method="GET">
-        <input class="btn" type="submit" value="Update">
+        <input class="btn mt-5" type="submit" value="Update">
       </form>
     </div>
 
