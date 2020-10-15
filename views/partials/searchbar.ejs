@@ -4,8 +4,8 @@
 
 <div class="search-bar row">
   <div class="col">
-    <input id="input-bar" onkeyup="searchBar()"  type="text" name="search">
-    <button id="search-btn">Search</button>
+    <i class="fas fa-search mr-1"></i>
+    <input id="input-bar" onkeyup="searchBar()"  type="text" name="search" placeholder="search for products" />
     <ul class="search-items">
         <% for(let i = 0; i < products.length; i++) { %> 
             <li class="search">

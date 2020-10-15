@@ -55,7 +55,12 @@ app.use('/products', ctrl.products);
 app.use('/users', ctrl.users);
 
 app.use('*', (req, res) => {
-  res.render('404');
+  db.Product.find({}, (err, allProducts) => {
+    if (err) return console.log(err);
+    
+    const context = { products: allProducts };
+    res.render('404', context);
+  });
 });
 
 
