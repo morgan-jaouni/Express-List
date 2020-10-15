@@ -22,14 +22,6 @@ router.get('/', (req,res) => {
   });
 });
 
-// GET New
-router.get('/new', (req, res) => {
-  res.render('users/new');
-});
-
-
-
-
 // GET Users show page
 router.get('/:userId', (req, res) => {
   db.User.findById(req.params.userId)
