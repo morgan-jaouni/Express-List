@@ -1,9 +1,18 @@
 
-<script src="./scripts/app.js"></script> 
+<script defer src="./scripts/app.js"></script> 
 
 
-<div class="search-bar row justify-content-end mt-3" >
+<div class="search-bar row">
+  <div class="col">
     <input id="input-bar" onkeyup="searchBar()"  type="text" name="search">
     <button id="search-btn">Search</button>
-</div>
+    <ul class="search-items">
+        <% for(let i = 0; i < products.length; i++) { %> 
+            <li class="search">
+              <a class = "search-link" href="/products/<%= products[i].id %>"><%= products[i].type %></a>
+            </li>
+          <% } %>
+    </ul>
 
+  </div>
+</div>

@@ -31,7 +31,12 @@ app.use(methodOverride('_method'));
 
 // Home Route
 app.get('/', (req, res) => {
-  res.render('index');
+  db.Product.find({}, (err, allProducts) => {
+    if (err) return console.log(err);
+
+    const context = { products: allProducts }
+    res.render('index', context);
+  });
 });
 
 // POST New user

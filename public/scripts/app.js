@@ -2,10 +2,9 @@
 
 $('#sign-up').on("click", (event) => {
 
-$('.user-cover').animate({right: '110%'});
+    $('.user-cover').animate({right: '110%'});
 
 });
-
 
 
 // searchbar for listings
@@ -19,7 +18,7 @@ function searchBar() {
             x[i].style.display="none"; 
         } 
         else { 
-            x[i].style.display="search";                  
+            x[i].style.display="block";
         };
     };
 };

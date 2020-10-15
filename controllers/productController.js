@@ -4,6 +4,7 @@ const api = process.env.API_KEY;
 
 const db = require('../models');
 
+
 //Get Index
 router.get('/', (req,res) => {
     
