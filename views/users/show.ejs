@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- u-show CSS -->
+    <link rel="stylesheet" href="/styles/u-show.css">
+    <title>Express List</title>
+  </head>
+  <body>
+
+    <header class="row justify-content-center">
+      <h1>Profile</h1>
+    </header>
+
+    <%- include('../partials/navbar') %>
+    <%- include('../partials/searchbar') %>
+
+    <main>
+      <div class="user-info mb-5 mt-5">
+        <h3>Profile Info</h3>
+        <p>Name: <%= user.name %> </p>
+        <p>Username: <%= user.userName %> </p>
+        <p>Password: <%= user.password %> </p>
+        <p>Location: <%= user.location %> </p>
+      </div>
+
+      <div>
+        <button class="btn mb-5">
+          <a class="button-anchor" href="/products/new">Create New Listing</a>
+        </button>
+      </div>
+      
+      <div class="user-listings">
+        <h3>Current Listings</h3>
+        <ul>
+        <% for (let i = 0; i < user.products.length; i++) { %>
+          <li>
+            <a class="user-products" href="/products/<%= user.products[i].id %>"><%= user.products[i].type %> </a>
+          </li>
+        <% } %> 
+        </ul>
+        
+        <form class="user-form-buttons mr-2" action="/users/<%= user.id %>?_method=DELETE" method="POST">
+          <input class="btn" type="submit" value="Delete">
+        </form>
+    
+        <form class="user-form-buttons" action="/users/<%= user.id %>/edit" method="GET">
+          <input class="btn" type="submit" value="Update">
+        </form>
+
+      </div>
+
+      <!-- Google Maps -->
+      <iframe
+        class="show-map"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=<%= api %> 
+          &q=<%= user.location %>" allowfullscreen>
+      </iframe>
+
+    </main>
+
+    <%- include('../partials/footer') %> 
+
+  </body>
+</html>

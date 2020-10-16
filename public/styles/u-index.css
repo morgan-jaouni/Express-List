@@ -1,0 +1,25 @@
+h1 {
+    color:#ffe6ff;
+}
+
+.seller-div {
+    background-color: rgba(0, 0, 0, .5);
+    margin: 70px auto;
+    padding: 30px;
+    color:#ffe6ff;
+    width: 65%;
+    min-height: 80%;
+    border-radius: 2%;
+}
+
+.sellers-items {
+    color: #ffe6ff;
+    font-size: 22px;
+}
+.sellers-anchor {
+    color: #ffe6ff; 
+    line-height: 70px;
+}
+.sellers-anchor:hover {
+    color: #ffe6ff;  
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- jQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+    <!-- Main JS -->
+    <script defer src="scripts/app.js"></script>
+    <title>Express List</title>
+  </head>
+
+  <body class="container-fluid p-0 m-0">
+    <header class="row justify-content-center">
+      <h1 class="mt-2">Express List</h1>
+    </header>
+
+    <%- include('./partials/navbar') %> 
+    <%- include('./partials/searchbar') %> 
+   
+    <main class="sign-cover">
+      <div class="user row justify-content-center">
+        <span class="user-cover">
+          <button class="btn" id="sign-up">Sign Up!</button>
+        </span>
+        <section class="row login-box justify-content-center text-center">
+          <div class="align-self-center">
+            <h2 class="py-3">Create A Profile!</h2>
+            <form class="user-box" action="/users" method="POST">
+              <div class="form-items">
+                <input class="text-input" id="name" name="name" type="text" placeholder="Name"></input>
+              </div>
+              <div class="form-items">
+                <input class="text-input" id="userName" name="userName" type="text" placeholder="Username"></input>
+              </div>
+              <div class="form-items">
+                <input class="text-input" id="password" name="password" type="text" placeholder="Password"></input>
+              </div>
+              <div class="form-items">
+                <input class="text-input" id="location" name="location" type="text" placeholder="Location"></input>
+              </div>
+              <button class="btn mt-3" type="submit">Sign Up!</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <%- include('./partials/footer') %> 
+
+  </body>
+</html>

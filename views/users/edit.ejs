@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- u-edit CSS -->
+    <link rel="stylesheet" href="/styles/u-edit.css">
+    <title>Express List</title>
+  </head>
+  <body>
+
+    <header class="row justify-content-center">
+      <h1>Update Profile</h1>
+    </header>
+
+    <%- include('../partials/navbar') %> 
+    <%- include('../partials/searchbar') %>
+    
+    <form class="edit-box" action="/users/<%= user.id %>?_method=PUT" method="POST">
+
+      <div>
+        <label for="name">Name: </label>
+        <input class="text-input" id="name" name="name" type="text" value="<%= user.name %>"></input>
+      </div>
+
+      <div>
+        <label for="userName">Username: </label>
+        <input class="text-input" id="userName" name="userName" type="text" value="<%= user.userName %>"></input>
+      </div>
+
+      <div>
+        <label for="password">Password: </label>
+        <input class="text-input" id="password" name="password" type="text" value="<%= user.password %>"></input>
+      </div>
+
+      <div>
+        <label for="location">Location: </label>
+        <input class="text-input" id="location" name="location" type="text" value="<%= user.location %>"></input>
+      </div>
+
+      <button class="btn mt-3" type="submit">Update</button>
+    </form>
+
+    <%- include('../partials/footer') %> 
+
+  </body>
+</html>

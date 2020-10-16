@@ -1,0 +1,50 @@
+h1 {
+  color:#ffe6ff;
+}
+
+.product-container {
+  position: relative;
+    background-color: rgba(0, 0, 0, .5);
+    margin: 70px auto;
+    padding: 30px;
+    color:#ffe6ff;
+    width: 65%;
+    min-height: 80%;
+    border-radius: 2%;
+}
+
+.product-text {
+    color: #ffe6ff;
+    font-size: 22px;
+    display: block;
+}
+
+.product-image {
+  display: block;
+  height: 12em;
+  margin: 1em 0;
+}
+
+.show-product-form {
+  display: inline;
+}
+
+.user-name-link {
+  color: #ffe6ff;
+}
+.user-name-link:hover{
+  color:#ffe6ff;
+  }
+
+  .show-map {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    width: 40%;
+    height: 45%;
+  }
+
+  .location {
+    position: relative;
+    left:34%;
+  }

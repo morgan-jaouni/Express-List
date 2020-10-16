@@ -1,0 +1,47 @@
+h1 {
+  color: #ffe6ff;
+}
+
+main {
+    position: relative;
+    background-color: rgba(0, 0, 0, .5);
+    margin: 70px auto;
+    padding: 30px;
+    color:#ffe6ff;
+    width: 65%;
+    min-height: 90%;
+    border-radius: 2%;
+}
+
+.button-anchor {
+  color:#0e153a;
+}
+
+.button-anchor:hover {
+  color: #0e153a;
+  text-decoration: none;
+}
+
+.user-form-buttons {
+  display: inline;
+}
+
+.user-products {
+  color:#ffe6ff;
+}
+
+.user-products:hover {
+  color:#ffe6ff;
+}
+
+p {
+  font-size: 18px;
+}
+
+.show-map {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  width: 50%;
+  height: 45%;
+}

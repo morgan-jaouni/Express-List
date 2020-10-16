@@ -1,0 +1,28 @@
+h1 {
+    color:#ffe6ff;
+}
+
+.listing-div {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 70px auto;
+    padding: 30px;
+    color:#ffe6ff;
+    width: 65%;
+    min-height: 80%;
+    border-radius: 2%;
+}
+
+.list-items {
+    color: #ffe6ff;
+    font-size: 22px;
+    
+}
+.list-anchor {
+    color: #ffe6ff;
+    font-size: 22px;
+    line-height: 70px;
+}
+
+.list-anchor:hover{
+    color:#ffe6ff;
+    }

@@ -1,0 +1,30 @@
+h1 {
+    color:#ffe6ff;
+}
+
+.p-new-box {
+    background-color: rgba(0, 0, 0, .5);
+    margin: 70px auto;
+    padding: 30px;
+    color:#ffe6ff;
+    width: 65%;
+    min-height: 90%;
+    border-radius: 2%;
+}
+
+.text-input {
+    display: block;
+    background-color: rgba(255, 255, 255, .2);
+    border: none;
+    border-bottom: solid 2px #ffe6ff;
+    position: relative;
+    left: 3%;
+    width: 25%;
+  }
+
+  .select-box {
+      display: block;
+      background-color: rgba(255, 255, 255, .2);
+      border: none;
+      color:#ffe6ff;
+  }

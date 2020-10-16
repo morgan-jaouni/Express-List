@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+     <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- p-index CSS -->
+    <link rel="stylesheet" href="styles/p-index.css">
+    <title>Express List</title>
+  </head>
+  <body class="container-fluid p-0 m-0">
+    <header>
+      <h1 class="text-center">Current Listings</h1>
+    </header>
+
+    <%- include('../partials/navbar') %> 
+    <%- include('../partials/searchbar') %>
+  
+    <main class="listing-div mb-0">
+      <ul class="list-items">
+        <% for(let i = 0; i < products.length; i++) { %> 
+        <li>
+          <a class = "list-anchor" href="/products/<%= products[i].id %>"><%= products[i].type %> $<%= products[i].price %></a>
+        </li>
+        <% } %>
+      </ul>
+    </main>
+
+    <%- include('../partials/footer') %> 
+
+  </body>
+</html>
