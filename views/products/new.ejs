@@ -3,50 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Main CSS -->
     <link rel="stylesheet" href="/styles/main.css">
+    <!-- p-new CSS -->
     <link rel="stylesheet" href="/styles/p-new.css">
     <title>Express List</title>
   </head>
   <body>
+
+    <header class="row justify-content-center">
+      <h1> List An Item </h1>
+    </header>
+
     <%- include('../partials/navbar') %>
     <%- include('../partials/searchbar') %> 
 
-    <div class="row justify-content-center">
-    <h1> List An Item </h1>
-    </div>
-    
-    
-<form class="p-new-box" action="/products" method="POST">
-<div>
-
-      <select class="select-box mt-3 mb-3" name="user">
-        <% users.forEach((user) => { %>
+    <form class="p-new-box" action="/products" method="POST">
+      <div>
+        <select class="select-box mt-3 mb-3" name="user">
+          <% users.forEach((user) => { %>
           <option value="<%= user.id %>"><%= user.name %></option>
           <% }) %>
-      </select>
-      <label for="type">For Sale: </label>
-      <input class="text-input" id="type" name="type" type="text"></input>
+        </select>
+        <label for="type">For Sale: </label>
+        <input class="text-input" id="type" name="type" type="text"></input>
       </div>
+
       <div>
-      <label for="price">Price: </label>
-      <input class="text-input" id="price" name="price" type="text"></input>
+        <label for="price">Price: </label>
+        <input class="text-input" id="price" name="price" type="text"></input>
       </div>
+
       <div>
-      <label for="condition">Condition: </label>
-      <input class="text-input" id="condition" name="condition" type="text"></input>
+        <label for="condition">Condition: </label>
+        <input class="text-input" id="condition" name="condition" type="text"></input>
       </div>
+
       <div>
-      <label for="image">Image: </label>
-      <input class="text-input" id="image" name="image" type="text"></input>
+        <label for="image">Image: </label>
+        <input class="text-input" id="image" name="image" type="text"></input>
       </div>
-      <div>
+
       <button class="btn mt-3" type="submit">Create</button>
-      </form>
-      </div>
-  </div>
-  <%- include('../partials/footer') %> 
+
+    </form>
+
+    <%- include('../partials/footer') %> 
   
   </body>
 </html>

@@ -4,7 +4,6 @@ const api = process.env.API_KEY;
 
 const db = require('../models');
 
-
 //View users route
 router.get('/', (req,res) => {
   db.User.find({}, (err, allUsers) => {
@@ -31,7 +30,6 @@ router.get('/:userId', (req, res) => {
       db.Product.find({}, (err, allProducts) => {
         if (err) return console.log(err);
   
-
         console.log('foundUser: ', foundUser);
   
         const context = {
@@ -63,7 +61,6 @@ router.delete('/:userId', (req,res) => {
 });
 
 // GET User  Edit
-
 router.get('/:userId/edit', (req, res) =>{
   db.User.findById(req.params.userId, (err, foundUser) => {
       if (err) return console.log(err);
@@ -93,7 +90,5 @@ router.put('/:userId', (req, res) => {
       }
   );
 });
-
-
 
 module.exports = router;

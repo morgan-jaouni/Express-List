@@ -1,6 +1,8 @@
+// -----------Configs
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const morgan = require('morgan');
 const methodOverride = require('method-override');
 require('dotenv').config();
 const PORT = process.env.PORT || 4000;
@@ -18,7 +20,7 @@ app.use(express.static(__dirname + '/public'));
 const ctrl = require('./controllers');
 
 
-// Middleware
+// -----------Middleware
 
 // body parser
 app.use(bodyParser.urlencoded({extended: false}));
@@ -27,8 +29,11 @@ app.use(bodyParser.json());
 // Method Override
 app.use(methodOverride('_method'));
 
+// Morgan
+app.use(morgan(':method : url'));
 
-// Routes
+
+// --------------Routes
 
 // Home Route
 app.get('/', (req, res) => {
