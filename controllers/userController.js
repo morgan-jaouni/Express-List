@@ -9,20 +9,18 @@ const db = require('../models');
 router.get('/', (req,res) => {
   db.User.find({}, (err, allUsers) => {
     if (err) return console.log(err);
+    db.Product.find({}, (err, allProducts) => {
+      if (err) return console.log(err);
 
-    const context = { users: allUsers };
-
-    res.render('users/index', context);
+      const context = {
+        users: allUsers,
+        products: allProducts,
+      };
+  
+      res.render('users/index', context);
+    });
   });
 });
-
-// GET New
-router.get('/new', (req, res) => {
-  res.render('users/new');
-});
-
-
-
 
 // GET Users show page
 router.get('/:userId', (req, res) => {
@@ -30,12 +28,20 @@ router.get('/:userId', (req, res) => {
     .populate('products')
     .exec((err, foundUser) => {
       if(err) return console.log(err);
+      db.Product.find({}, (err, allProducts) => {
+        if (err) return console.log(err);
+  
 
-      console.log('foundUser: ', foundUser);
-
-      const context = { user: foundUser, api: api };
-      
-      res.render('users/show', context);
+        console.log('foundUser: ', foundUser);
+  
+        const context = {
+          user: foundUser,
+          api: api,
+          products: allProducts,
+        };
+        
+        res.render('users/show', context);
+      });
     });
 });
 
@@ -61,10 +67,17 @@ router.delete('/:userId', (req,res) => {
 router.get('/:userId/edit', (req, res) =>{
   db.User.findById(req.params.userId, (err, foundUser) => {
       if (err) return console.log(err);
+      db.Product.find({}, (err, allProducts) => {
+        if (err) return console.log(err);
+  
+        const context = {
+          user: foundUser,
+          products: allProducts,
+        };
+  
+        res.render('users/edit', context);
+      });
 
-      const context = { user: foundUser };
-
-      res.render('users/edit', context);
   });
 });
 

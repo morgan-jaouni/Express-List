@@ -4,6 +4,7 @@ const api = process.env.API_KEY;
 
 const db = require('../models');
 
+
 //Get Index
 router.get('/', (req,res) => {
     
@@ -17,15 +18,18 @@ router.get('/', (req,res) => {
 });
 
 
-//New Product 
+//GET New Product 
 router.get('/new', (req,res) => {
     db.User.find({}, (err, allUsers) => {
-
         if (err) return console.log(err);
-        const context = {
-            users: allUsers
-        }
-        res.render('products/new', context);
+        db.Product.find({}, (err, allProducts) => {
+
+            const context = {
+                users: allUsers,
+                products: allProducts,
+            }
+            res.render('products/new', context);
+        });
     });
 });
 
@@ -50,17 +54,29 @@ router.post('/', (req,res) => {
 
 //GET Show products
 router.get('/:productId', (req,res) =>{
-
+    
     db.Product.findById(req.params.productId)
     .populate('user')
     .exec((err, productById) => {
         if(err) return console.log(err);
-        console.log(productById);
-        const context = { product: productById, api: api };
 
-        res.render('products/show', context);
+        db.Product.find({}, (err, allProducts) => {
+            if (err) return console.log(err);
+            console.log(productById);
+            const context = {
+                product: productById,
+                api: api,
+                products: allProducts,
+            };
+
+            console.log(allProducts);
+    
+            res.render('products/show', context);
+    
+        });
 
     });
+
 });
 
 // GET Edit
@@ -68,10 +84,17 @@ router.get('/:productId', (req,res) =>{
 router.get('/:productId/edit', (req, res) =>{
     db.Product.findById(req.params.productId, (err, foundProduct) => {
         if (err) return console.log(err);
+        db.Product.find({}, (err, allProducts) => {
+            if (err) return console.log(err);
 
-        const context = { product: foundProduct };
+            const context = {
+                product: foundProduct, 
+                products: allProducts,
+            };
+    
+            res.render('products/edit', context);
+        });
 
-        res.render('products/edit', context);
     });
 });
 

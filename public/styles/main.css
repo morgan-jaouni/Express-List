@@ -172,16 +172,37 @@ footer {
 }
 
 .search-bar {
-  margin: auto;
-  width:90%;
+  position: absolute;
   text-decoration: none;
   outline: none;
+  top: 20px;
+  right: 20px;
 }
+
 #input-bar {
   outline: none;
   background-color: #ffe6ff;
 }
 
+.search-items {
+  background: white;
+  width: 100%;
+}
 
+.search {
+  display: none;
+  list-style: none;
+}
 
+.search-link {
+  color: black;
+}
 
+.search-link:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.visible {
+  display: block;
+}
