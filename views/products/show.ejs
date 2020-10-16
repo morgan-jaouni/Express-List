@@ -28,7 +28,7 @@
           <a class="p-3 product-text user-name-link mt-5" href="/users/<%= product.user.id %>"><%= product.user.userName %> </a>   
           <p class="p-3 product-text mt-5"><%= product.type %> </>
           <p class="p-3 product-text mt-5"> $ <%= product.price %> </p>
-          <p class="location p-3 product-text mt-5">Location: <%= product.user.location %> </p>
+          
         </div>
     
         <img class="product-image mt-5" src="<%= product.image %>" alt="" />
@@ -43,16 +43,18 @@
         </form>
       </div>
 
-      <iframe
-        class="show-map"
-        frameborder="0" style="border:0"
-        src="https://www.google.com/maps/embed/v1/place?key=<%= api %> 
-          &q=<%= product.user.location %>" allowfullscreen>
-      </iframe>
+      <div class="col-6 justify-content-center text-center">
+        <p class="location product-text">Location: <%= product.user.location %> </p>
+        <iframe
+          class="show-map"
+          frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed/v1/place?key=<%= api %> 
+            &q=<%= product.user.location %>" allowfullscreen>
+        </iframe>
+      </div>
 
     </main>
 
     <%- include('../partials/footer') %> 
-    
   </body>
 </html>
