@@ -67,10 +67,17 @@ router.delete('/:userId', (req,res) => {
 router.get('/:userId/edit', (req, res) =>{
   db.User.findById(req.params.userId, (err, foundUser) => {
       if (err) return console.log(err);
+      db.Product.find({}, (err, allProducts) => {
+        if (err) return console.log(err);
+  
+        const context = {
+          user: foundUser,
+          products: allProducts,
+        };
+  
+        res.render('users/edit', context);
+      });
 
-      const context = { user: foundUser };
-
-      res.render('users/edit', context);
   });
 });
 
