@@ -40,11 +40,10 @@ h1 {
     position: absolute;
     top: 25%;
     right: 5%;
-    width: 40%;
+    width: 90%;
     height: 45%;
   }
 
   .location {
-    position: relative;
-    left:34%;
+    margin: 65px auto 5px;
   }
