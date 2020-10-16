@@ -4,19 +4,14 @@ const api = process.env.API_KEY;
 
 const db = require('../models');
 
-
 //Get Index
 router.get('/', (req,res) => {
-    
     db.Product.find({}, (err, allProducts) => {
-    
         if (err) return console.log(err);
 
         res.render('products/index', {products : allProducts})
-
     });
 });
-
 
 //GET New Product 
 router.get('/new', (req,res) => {
@@ -34,10 +29,8 @@ router.get('/new', (req,res) => {
 });
 
 //POST new product
-
 router.post('/', (req,res) => {
     db.Product.create(req.body, (err, newProduct) => {
-
         if (err) return console.log(err);
 
     db.User.findById(req.body.user, (err, foundUser) =>{
@@ -54,7 +47,6 @@ router.post('/', (req,res) => {
 
 //GET Show products
 router.get('/:productId', (req,res) =>{
-    
     db.Product.findById(req.params.productId)
     .populate('user')
     .exec((err, productById) => {
@@ -72,15 +64,11 @@ router.get('/:productId', (req,res) =>{
             console.log(allProducts);
     
             res.render('products/show', context);
-    
         });
-
     });
-
 });
 
 // GET Edit
-
 router.get('/:productId/edit', (req, res) =>{
     db.Product.findById(req.params.productId, (err, foundProduct) => {
         if (err) return console.log(err);
@@ -94,7 +82,6 @@ router.get('/:productId/edit', (req, res) =>{
     
             res.render('products/edit', context);
         });
-
     });
 });
 
@@ -114,7 +101,7 @@ router.put('/:productId', (req, res) => {
 // Delete
 router.delete('/:productId', (req, res) =>{
     const productId = req.params.productId;
-
+    
     db.Product.findByIdAndDelete(productId, (err) => {
         if (err) return console.log(err);
 

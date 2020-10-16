@@ -5,41 +5,31 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  overflow: hidden;
-}
-  /* <!-- //modeled after https://freefrontend.com/css-text-animations/ --> */
 
-  @font-face {
-    font-family: Clip;
-    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
-  }
+@font-face {
+  font-family: Clip;
+  src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+}
        
-  h1 {
-    position: absolute;                      
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 50%;
-    transform: translate(-50%, -50%);
-    letter-spacing: 2;
-    left: 50%;
-    top: 5%;
-    font-family: "Clip";
-    font-size: 3.5em;
-    color: #ffe6ff;
-    /* text-shadow:  0 0 1.5rem #ffe6ff,
-      -0.2rem 0.1rem 1rem #ffe6ff, 0.2rem 0.1rem 1rem #ffe6ff,
-      0 -0.5rem 2rem #ffe6ff, 0 0.5rem 3rem #ffe6ff;
-    animation: shine 2s forwards, flicker 3s infinite; */
-    
-  } 
+h1 {
+  position: absolute;                      
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 2;
+  left: 50%;
+  top: 5%;
+  font-family: "Clip";
+  font-size: 3.5em;
+  color: #ffe6ff;
+} 
 
   
-  h2 {
-    color:#ffe6ff;
-  }
+h2 {
+  color:#ffe6ff;
+}
 
 body {
   font-size: 16px;
@@ -52,34 +42,36 @@ body {
   width: 100vw;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
+
 .nav-bar {
-  /* background: #e2f3f5; */
   position: absolute;
   top:0%;
   min-height: 25%;
   width: 7%;
-  border-radius: 5%;
 }
+
 .navbar-links {
   color: #ffe6ff;
-  /* background: #e2f3f5; */
 }
+
 .navbar-links:hover{
 color: #ffe6ff;
 }
+
 .nav-items {
 list-style: none;                 
 }
 
 .btn {
   background:  #ffe6ff;
-
 }
 
 .button-text {
   color: #0e153a;
 }
+
 .button-text:hover {
   text-decoration: none;
   color:#0e153a;
@@ -92,12 +84,13 @@ list-style: none;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-radius: 5%;
+    border-radius: 2%;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     transition: transform .3s linear;
 }
+
 .user-cover {
   background: #ffe6ff;
   margin: 0 auto;
@@ -106,13 +99,13 @@ list-style: none;
   position: absolute;
   text-align: center;
   line-height: 80px;
-  border-radius: 5%;
+  border-radius: 2%;
   font-size: 1.6em;
   transition: transform .7s ease-in-out;
   z-index: 2;
   overflow: hidden;
-  
 }
+
 .sign-cover {
   display: flex;
   flex-direction: column;
@@ -124,10 +117,6 @@ list-style: none;
   margin: 0 auto;
 }
 
-/* .user:hover .user-cover {
-transform: translateX(-110%);
-} */
-
 #sign-up {
   background-color: black;
   color:#ffe6ff;
@@ -137,9 +126,11 @@ transform: translateX(-110%);
   top:35%;
   outline: none;
 }
+
 #sign-up:hover{
-        transform: scale(1.2);
+  transform: scale(1.2);
 }
+
 #search-btn {
   background-color: black;
   color:#ffe6ff;

@@ -3,53 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!-- Bootstrao -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Main CSS -->
     <link rel="stylesheet" href="/styles/main.css">
+    <!-- p-show CSS -->
     <link rel="stylesheet" href="/styles/p-show.css">
     <title>Express List</title>
   </head>
   <body>
-    <h1 class="text-center">Product For Sale</h1>
+
+    <header>
+      <h1 class="text-center">Product For Sale</h1>
+    </header>
+
     <%- include('../partials/navbar') %> 
     <%- include('../partials/searchbar') %> 
     
-    <div class="row product-container justify-content-start">
+    <main class="row product-container justify-content-start">
       <div class="col">
         <div class="row">
-            <a class="p-3 product-text user-name-link mt-5" href="/users/<%= product.user.id %>"><%= product.user.userName %> </a>
-          
+          <a class="p-3 product-text user-name-link mt-5" href="/users/<%= product.user.id %>"><%= product.user.userName %> </a>   
           <p class="p-3 product-text mt-5"><%= product.type %> </>
           <p class="p-3 product-text mt-5"> $ <%= product.price %> </p>
-          
-            <p class="location p-3 product-text mt-5">Location: <%= product.user.location %> </p>
-          
-
+          <p class="location p-3 product-text mt-5">Location: <%= product.user.location %> </p>
         </div>
     
-      <img class="product-image mt-5" src="<%= product.image %>" alt="" />
-      <p class="product-text">Condition: <%= product.condition %> </p>
+        <img class="product-image mt-5" src="<%= product.image %>" alt="" />
+        <p class="product-text">Condition: <%= product.condition %> </p>
 
-      <form class="show-product-form" action="/products/<%= product.id %>?_method=DELETE" method="POST">
-        <input class="btn mr-2 mt-5" type="submit" value="Delete">
-      </form>
+        <form class="show-product-form" action="/products/<%= product.id %>?_method=DELETE" method="POST">
+          <input class="btn mr-2 mt-5" type="submit" value="Delete">
+        </form>
 
-      <form class="show-product-form" action="/products/<%= product.id %>/edit" method="GET">
-        <input class="btn mt-5" type="submit" value="Update">
-      </form>
-    </div>
+        <form class="show-product-form" action="/products/<%= product.id %>/edit" method="GET">
+          <input class="btn mt-5" type="submit" value="Update">
+        </form>
+      </div>
 
-    
       <iframe
         class="show-map"
         frameborder="0" style="border:0"
         src="https://www.google.com/maps/embed/v1/place?key=<%= api %> 
           &q=<%= product.user.location %>" allowfullscreen>
       </iframe>
-    
 
-    </div>
+    </main>
 
     <%- include('../partials/footer') %> 
+    
   </body>
 </html>

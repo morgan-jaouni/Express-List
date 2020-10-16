@@ -1,6 +1,7 @@
 require('dotenv').config();
 const db = require('./models');
 
+// Seed user data
 const users = [
   {
     name: 'Ashley, Smith',
@@ -34,6 +35,7 @@ const users = [
   },
 ];
 
+// Seed products data
 const products = [
   {
     type: "'66 Ford Mustang",
@@ -72,6 +74,7 @@ const products = [
   },
 ];
 
+// Create collections
 db.Product.deleteMany((err, result) => {
   if (err) {
     console.log(err);

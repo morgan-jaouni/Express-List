@@ -2,7 +2,7 @@ h1 {
   color: #ffe6ff;
 }
 
-section {
+main {
     position: relative;
     background-color: rgba(0, 0, 0, .5);
     margin: 70px auto;
@@ -10,7 +10,7 @@ section {
     color:#ffe6ff;
     width: 65%;
     min-height: 90%;
-    border-radius: 5%;
+    border-radius: 2%;
 }
 
 .button-anchor {
