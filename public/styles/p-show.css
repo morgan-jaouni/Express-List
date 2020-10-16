@@ -21,8 +21,8 @@ h1 {
 
 .product-image {
   display: block;
-  width: 50%;
-  margin: 12em 0;
+  height: 12em;
+  margin: 1em 0;
 }
 
 .show-product-form {
