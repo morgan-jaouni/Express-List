@@ -13,7 +13,11 @@ JavaScript
 jQuery
 Node.js
 Express
+ejs
+MongoDB
 Mongoose
+Bootstrap
+Google Map API
 
 //FEATURES 
 
@@ -85,10 +89,10 @@ The user can update their profile.
 
 The user can post a new product inputting price, condition, location.
 
-![Product-New](https://media.git.generalassemb.ly/user/31017/files/f71b1d80-0f03-11eb-851a-da47e83d4302)
+![Product-New](https://media.git.generalassemb.ly/user/31017/files/55490000-0f06-11eb-8e4a-4d3123ec2bc9)
 
 ##User Stories Update Product
 
 The user can update their listing
 
-![Product-Edit](https://media.git.generalassemb.ly/user/31017/files/30538d80-0f04-11eb-88f7-22013d86d061)
+![Product-Edit](https://media.git.generalassemb.ly/user/31017/files/23379e00-0f06-11eb-9b31-de3a58356609)

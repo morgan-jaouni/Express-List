@@ -15,9 +15,9 @@
     <%- include('../partials/searchbar') %> 
     
     <div class="row product-container justify-content-start">
-      <a class="product-text user-name-link" href="/users/<%= product.user.id %>"><%= product.user.userName %> </a>
       <div class="col">
         <div class="row">
+          <a class="p-3 product-text user-name-link mt-5" href="/users/<%= product.user.id %>"><%= product.user.userName %> </a>
           <p class="p-3 product-text mt-5"><%= product.type %> </>
           <p class="p-3 product-text mt-5"> $ <%= product.price %> </p>
           <p class="location p-3 product-text mt-5">Location: <%= product.user.location %> </p>
