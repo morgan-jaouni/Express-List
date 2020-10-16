@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const morgan = require('morgan');
 const methodOverride = require('method-override');
 require('dotenv').config();
 const PORT = process.env.PORT || 4000;
@@ -26,6 +27,9 @@ app.use(bodyParser.json());
 
 // Method Override
 app.use(methodOverride('_method'));
+
+// Morgan
+app.use(morgan(':method : url'));
 
 // Routes
 
