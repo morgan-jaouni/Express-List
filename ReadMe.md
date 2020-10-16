@@ -70,7 +70,7 @@ The user will be able to view the current sellers. The user can click on another
 
 THe user can update or delete profile and createa a new listing for an item.
 
-![Profile-Show](https://media.git.generalassemb.ly/user/31017/files/d783f500-0f03-11eb-909f-47cf0fb0665f
+![Profile-Show](https://media.git.generalassemb.ly/user/31017/files/d783f500-0f03-11eb-909f-47cf0fb0665f)
 
 ##USER STORIES Product Show Page
 
