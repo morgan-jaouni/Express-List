@@ -38,8 +38,7 @@ The user will have the option to update and delete their listing
 
 The user will be able to view listings of other sellers 
 
-//**Would like to have:
-Add google map next to listing that shows location of seller
+The user can view the location of the listing via Google Map API
 
 //Profile page
 
