@@ -86,3 +86,7 @@ https://protected-ocean-10059.herokuapp.com/
 ##### The user can update their listing
 
 ![Product-Edit](https://media.git.generalassemb.ly/user/31017/files/23379e00-0f06-11eb-9b31-de3a58356609)
+
+
+#### Collaborators: Morgan Jaouni, Josh Pardike 
+##### 5 day deadline
