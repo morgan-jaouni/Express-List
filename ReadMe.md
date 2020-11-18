@@ -44,44 +44,44 @@ https://protected-ocean-10059.herokuapp.com/
 ![Home-Index](https://media.git.generalassemb.ly/user/31017/files/7c520280-0f03-11eb-8309-591c4e18e149)
 
 
-### USER STORIES VIEW LISTING PAGE
+### VIEW LISTING PAGE
 
 ##### The user will be able to view or search for current items listed by other users. 
 
 ![Products-Index](https://media.git.generalassemb.ly/user/31017/files/bcb18080-0f03-11eb-9374-37be55d63583)
 
-### USER STORIES User Index Page
+### User Index Page
 
 ##### The user will be able to view the current sellers. The user can click on another user and view their current listings and location.
 
 ![User-Index](https://media.git.generalassemb.ly/user/31017/files/c935d900-0f03-11eb-842e-5d128e6072d9)
 
-### USER STORIES Profile Show Page
+### Profile Show Page
 
 ##### THe user can update or delete profile and createa a new listing for an item.
 
 ![Profile-Show](https://media.git.generalassemb.ly/user/31017/files/d783f500-0f03-11eb-909f-47cf0fb0665f)
 
-### USER STORIES Product Show Page
+### Product Show Page
 
 ##### The user can view location of the item and the user who posted it. The item can be updated or deleted. 
 
 ![Product-Show](https://media.git.generalassemb.ly/user/31017/files/e10d5d00-0f03-11eb-8591-50815adae6b1)
 
 
-### USER STORIES Profile Update Page
+### Profile Update Page
 
 ##### The user can update their profile.
 
 ![Profile-Edit](https://media.git.generalassemb.ly/user/31017/files/ee2a4c00-0f03-11eb-9b08-fbb0be278dfd)
 
-### USER STORIES New Product Page
+### New Product Page
 
 ##### The user can post a new product inputting price, condition, location.
 
 ![Product-New](https://media.git.generalassemb.ly/user/31017/files/55490000-0f06-11eb-8e4a-4d3123ec2bc9)
 
-### User Stories Update Product
+### Update Product
 
 ##### The user can update their listing
 
