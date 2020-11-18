@@ -1,31 +1,35 @@
 
-Express List
+# Express List
 
 The goal of this project is to deploy an application that allows user to create profile, view listings of other users, and create listings of their own.
 
+#### Heroku Deployment
 https://protected-ocean-10059.herokuapp.com/
 
 
-Technologies Used:
-HTML
-CSS 
-JavaScript
-jQuery
-Node.js
-Express
-ejs
-MongoDB
-Mongoose
-Bootstrap
-Google Map API
+#### Technologies:
+* HTML
+* CSS 
+* JavaScript
+* jQuery
+* Node.js
+* Express
+* ejs
+* MongoDB
+* Mongoose
+* Bootstrap
+* Google Map API
 
-//FEATURES 
+#### FEATURES 
 
--Google Map that displays location of listed item
--Functioning search bar that allows user to search for items
+* Google Map that displays location of listed item
+* Functioning search bar that allows user to search for items
+* Ability to create profile 
 
-##USER STORIES Global
 
+## USER STORIES Global
+#### Users with a profile can: 
+* Create 
 When the user enters expresslist.com they will be prompted with a sign-up or login page
 
 After logging in/signing up, the user can list any item of their choosing
