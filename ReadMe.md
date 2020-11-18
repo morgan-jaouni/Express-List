@@ -29,7 +29,12 @@ https://protected-ocean-10059.herokuapp.com/
 
 ## USER STORIES Global
 #### Users with a profile can: 
-* Create 
+* Create a listing to sell
+* Edit listing
+* Delete listing
+* Search for other listings
+* View location of listings posted by other users
+
 When the user enters expresslist.com they will be prompted with a sign-up or login page
 
 After logging in/signing up, the user can list any item of their choosing
