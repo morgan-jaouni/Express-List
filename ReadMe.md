@@ -1,5 +1,5 @@
 
-# Express List
+# Express-List
 
 The goal of this project is to deploy an application that allows user to create profile, view listings of other users, and create listings of their own.
 
